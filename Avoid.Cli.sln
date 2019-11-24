@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli", "Avoid.Cli\Avoid.Cli.csproj", "{4BDA7F43-8F51-4988-8C4C-0846D4F3E85A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.TestBed", "Avoid.Cli.TestBed\Avoid.Cli.TestBed.csproj", "{286EFD5D-E10E-4A97-A3E9-93060C919AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.YoutubeDl", "Avoid.Cli.YoutubeDl\Avoid.Cli.YoutubeDl.csproj", "{A106F2A2-A52F-4C01-AEDD-81D3F665886F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.YoutubeDl.TestBed", "Avoid.Cli.YoutubeDl.TestBed\Avoid.Cli.YoutubeDl.TestBed.csproj", "{43E47D4B-A885-435E-A753-5101C54964FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BDA7F43-8F51-4988-8C4C-0846D4F3E85A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BDA7F43-8F51-4988-8C4C-0846D4F3E85A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BDA7F43-8F51-4988-8C4C-0846D4F3E85A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BDA7F43-8F51-4988-8C4C-0846D4F3E85A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286EFD5D-E10E-4A97-A3E9-93060C919AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286EFD5D-E10E-4A97-A3E9-93060C919AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286EFD5D-E10E-4A97-A3E9-93060C919AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286EFD5D-E10E-4A97-A3E9-93060C919AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A106F2A2-A52F-4C01-AEDD-81D3F665886F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A106F2A2-A52F-4C01-AEDD-81D3F665886F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A106F2A2-A52F-4C01-AEDD-81D3F665886F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A106F2A2-A52F-4C01-AEDD-81D3F665886F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E47D4B-A885-435E-A753-5101C54964FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E47D4B-A885-435E-A753-5101C54964FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E47D4B-A885-435E-A753-5101C54964FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E47D4B-A885-435E-A753-5101C54964FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
