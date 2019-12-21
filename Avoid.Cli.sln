@@ -4,9 +4,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli", "Avoid.Cli\Avoi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.TestBed", "Avoid.Cli.TestBed\Avoid.Cli.TestBed.csproj", "{286EFD5D-E10E-4A97-A3E9-93060C919AC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.YoutubeDl", "Avoid.Cli.YoutubeDl\Avoid.Cli.YoutubeDl.csproj", "{A106F2A2-A52F-4C01-AEDD-81D3F665886F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.Downloader.YoutubeDl", "Avoid.Cli.Downloader.YoutubeDl\Avoid.Cli.Downloader.YoutubeDl.csproj", "{A106F2A2-A52F-4C01-AEDD-81D3F665886F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.YoutubeDl.TestBed", "Avoid.Cli.YoutubeDl.TestBed\Avoid.Cli.YoutubeDl.TestBed.csproj", "{43E47D4B-A885-435E-A753-5101C54964FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestBeds", "TestBeds", "{98AE2214-7C91-43DB-9C42-F32FF6E168A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.Downloader", "Avoid.Cli.Downloader\Avoid.Cli.Downloader.csproj", "{F409A3D6-1217-44C9-937A-469415563902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.Downloader.GetIplayer", "Avoid.Cli.Downloader.GetIplayer\Avoid.Cli.Downloader.GetIplayer.csproj", "{4561A609-3063-4172-BB0A-75BE88F22623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avoid.Cli.Downloader.GetIplayer.TestBed", "Avoid.Cli.Downloader.GetIplayer.TestBed\Avoid.Cli.Downloader.GetIplayer.TestBed.csproj", "{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +38,22 @@ Global
 		{43E47D4B-A885-435E-A753-5101C54964FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E47D4B-A885-435E-A753-5101C54964FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E47D4B-A885-435E-A753-5101C54964FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F409A3D6-1217-44C9-937A-469415563902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F409A3D6-1217-44C9-937A-469415563902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F409A3D6-1217-44C9-937A-469415563902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F409A3D6-1217-44C9-937A-469415563902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4561A609-3063-4172-BB0A-75BE88F22623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4561A609-3063-4172-BB0A-75BE88F22623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4561A609-3063-4172-BB0A-75BE88F22623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4561A609-3063-4172-BB0A-75BE88F22623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{286EFD5D-E10E-4A97-A3E9-93060C919AC1} = {98AE2214-7C91-43DB-9C42-F32FF6E168A4}
+		{43E47D4B-A885-435E-A753-5101C54964FE} = {98AE2214-7C91-43DB-9C42-F32FF6E168A4}
+		{B09C9B0D-C8D6-4762-B6A1-E8962DFEE4B7} = {98AE2214-7C91-43DB-9C42-F32FF6E168A4}
 	EndGlobalSection
 EndGlobal

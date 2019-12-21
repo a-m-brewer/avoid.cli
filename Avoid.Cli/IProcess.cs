@@ -3,9 +3,8 @@ using System.Diagnostics;
 
 namespace Avoid.Cli
 {
-    public interface IProcess : IDisposable
+    public interface IProcess : IRunnableProcess, IDisposable
     {
-        bool Start();
         ProcessStartInfo StartInfo { get; set; }
         event DataReceivedEventHandler OutputDataReceived;
         event DataReceivedEventHandler ErrorDataReceived;

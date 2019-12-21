@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace Avoid.Cli.YoutubeDl
+namespace Avoid.Cli.Downloader
 {
-    public class YoutubeDownloadCli
+    public class DownloadCli : IDownloadCli
     {
-        private readonly IYoutubeDownloadFactory _downloadFactory;
+        private readonly IDownloadFactory _downloadFactory;
 
-        public YoutubeDownloadCli(IYoutubeDownloadFactory downloadFactory)
+        public DownloadCli(IDownloadFactory downloadFactory)
         {
             _downloadFactory = downloadFactory;
         }
