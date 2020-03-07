@@ -11,5 +11,7 @@ namespace Avoid.Cli
         IBuilderActions AddFlag(string flag);
         IBuilderActions AddDataReceivedCallback(Action<object, DataReceivedEventArgs> callback);
         IBuilderActions AddErrorReceivedCallback(Action<object, DataReceivedEventArgs> callback);
+        IBuilderActions AddPreprocessAction(Action<IProcess> action);
+        IBuilderActions AddPostprocessAction(Action<IProcess> action);
     }
 }

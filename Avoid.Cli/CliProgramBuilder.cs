@@ -14,6 +14,8 @@ namespace Avoid.Cli
         private readonly List<string> _arguments = new List<string>();
         private readonly List<Action<object, DataReceivedEventArgs>> _callbacks = new List<Action<object, DataReceivedEventArgs>>();
         private readonly List<Action<object, DataReceivedEventArgs>> _errorCallbacks = new List<Action<object, DataReceivedEventArgs>>();
+        private readonly List<Action<IProcess>> _preprocessActions = new List<Action<IProcess>>();
+        private readonly List<Action<IProcess>> _postprocessActions = new List<Action<IProcess>>();
 
         public CliProgramBuilder()
         {
@@ -56,12 +58,26 @@ namespace Avoid.Cli
             return this;
         }
 
+        public IBuilderActions AddPreprocessAction(Action<IProcess> action)
+        {
+            _preprocessActions.Add(action);
+            return this;
+        }
+
+        public IBuilderActions AddPostprocessAction(Action<IProcess> action)
+        {
+            _postprocessActions.Add(action);
+            return this;
+        }
+
         public IProcess Build()
         {
             DefaultSettings();
             _process.StartInfo.FileName = _program;
             var args = BuildArguments();
             _process.StartInfo.Arguments = args;
+            _process.PreprocessActions.AddRange(_preprocessActions);
+            _process.PostprocessActions.AddRange(_postprocessActions);
             return _process;
         }
 

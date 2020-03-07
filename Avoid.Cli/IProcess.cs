@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Avoid.Cli
@@ -8,5 +9,8 @@ namespace Avoid.Cli
         ProcessStartInfo StartInfo { get; set; }
         event DataReceivedEventHandler OutputDataReceived;
         event DataReceivedEventHandler ErrorDataReceived;
+        
+        List<Action<IProcess>> PreprocessActions { get; } 
+        List<Action<IProcess>> PostprocessActions { get; } 
     }
 }
