@@ -16,7 +16,9 @@ namespace Avoid.Cli
         private readonly List<Action<object, DataReceivedEventArgs>> _errorCallbacks = new List<Action<object, DataReceivedEventArgs>>();
         private readonly List<Action<IProcess>> _preprocessActions = new List<Action<IProcess>>();
         private readonly List<Action<IProcess>> _postprocessActions = new List<Action<IProcess>>();
-
+        private readonly List<string> _allArgumentsInOrder = new List<string>();
+        private bool _buildArgumentsInOrder = false;
+        
         public CliProgramBuilder()
         {
             _process = new ProcessWrapper();
@@ -31,18 +33,22 @@ namespace Avoid.Cli
         public IBuilderActions AddFlagArgument(string flag, string argument)
         {
             _flagArguments.Add(flag, argument);
+            _allArgumentsInOrder.AddRange(new List<string> {flag, argument});
             return this;
         }
         
-        public IBuilderActions AddArgument(string argument)
+        public IBuilderActions AddArgument(string argument, bool safeQuote = true)
         {
-            _arguments.Add($"\"{argument}\"");
+            var parsedArgument = safeQuote ? $"\"{argument}\"" : argument;
+            _arguments.Add(parsedArgument);
+            _allArgumentsInOrder.Add(parsedArgument);
             return this;
         }
 
         public IBuilderActions AddFlag(string flag)
         {
             _flags.Add(flag);
+            _allArgumentsInOrder.Add(flag);
             return this;
         }
 
@@ -70,11 +76,17 @@ namespace Avoid.Cli
             return this;
         }
 
+        public IBuilderActions BuildArgumentsInAddOrder()
+        {
+            _buildArgumentsInOrder = true;
+            return this;
+        }
+
         public IProcess Build()
         {
             DefaultSettings();
             _process.StartInfo.FileName = _program;
-            var args = BuildArguments();
+            var args = _buildArgumentsInOrder ? BuildArgumentsInOrder() : BuildArguments();
             _process.StartInfo.Arguments = args;
             _process.PreprocessActions.AddRange(_preprocessActions);
             _process.PostprocessActions.AddRange(_postprocessActions);
@@ -97,6 +109,11 @@ namespace Avoid.Cli
                 : "";
             
             return $"{arguments} {flags} {flagArguments}";
+        }
+
+        private string BuildArgumentsInOrder()
+        {
+            return string.Join(" ", _allArgumentsInOrder);
         }
 
         private void RunCallbacks(object sender, DataReceivedEventArgs eventArgs)
