@@ -6,6 +6,9 @@
         <Description>A wrapper around the Process object making it easier to run CLI programs</Description>
         <PackageVersion>1.0.1</PackageVersion>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Title>Avoid CLI</Title>
+        <RepositoryUrl>https://github.com/a-m-brewer/avoid.cli</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
 </Project>
